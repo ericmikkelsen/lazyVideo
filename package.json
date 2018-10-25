@@ -1,0 +1,35 @@
+{
+  "name": "lazyvideo",
+  "version": "1.0.0",
+  "description": "A Lazy Loader for Videos that has css custom property checks",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^1.1.2",
+    "prettier": "^1.14.3",
+    "pretty-quick": "^1.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericmikkelsen/lazyVideo.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "keywords": [
+    "frontend",
+    "lazyload",
+    "video"
+  ],
+  "author": "eric.boldium.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericmikkelsen/lazyVideo/issues"
+  },
+  "homepage": "https://github.com/ericmikkelsen/lazyVideo#readme"
+}
