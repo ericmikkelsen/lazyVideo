@@ -1,0 +1,19 @@
+:root {
+  --lazyVideo: 0;
+}
+
+@supports (--VideoJS: 1) {
+  @media screen and (min-width: 48em) {
+    :root {
+      --lazyVideo: 1;
+      --lazyVideo__margin: 150%; /* must be in % or px */
+      --lazyVideo__threshold: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --lazyVideo: 0 !important;
+  }
+}
