@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "./node_modules/.bin/http-server ./"
+    "serve": "./node_modules/.bin/http-server -p 1222"
   },
   "repository": {
     "type": "git",
