@@ -45,5 +45,3 @@ const LazyVideo = class {
     }
   }
 };
-
-const lazyVideo = new LazyVideo();
