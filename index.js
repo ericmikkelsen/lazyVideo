@@ -19,7 +19,7 @@ const LazyVideo = class {
     return 0;
   }
   setup() {
-    this.videos = document.querySelectorAll(this.selector);
+    this.videos = [...document.querySelectorAll(this.selector)];
     this.options = {
       threshold:
         parseFloat(this.CSSProps.getPropertyValue("--lazyVideo__threshold")) ||
@@ -28,7 +28,7 @@ const LazyVideo = class {
         this.CSSProps.getPropertyValue("--lazyVideo__margin").trim() || "50%"
     };
 
-    [...this.videos].forEach(video => {
+    this.videos.forEach(video => {
       const observer = new IntersectionObserver(
         this.intersectedVideo,
         this.options
@@ -37,13 +37,18 @@ const LazyVideo = class {
     });
   }
   intersectedVideo(entries) {
+    const video = entries[0].target;
+
     if (entries[0].isIntersecting) {
       // the video element
-      if (!entries[0].target.src) {
-        entries[0].target.src = entries[0].target.getAttribute("data-src");
+      if (!video.src) {
+        video.src = video.getAttribute("data-src");
       }
+      if (video.autoplay && video.muted && video.paused) {
+        video.play();
+      }
+    } else if (video.autoplay && video.muted && !video.paused && video.src) {
+      video.pause();
     }
   }
 };
-
-const lazyVideo = new LazyVideo();

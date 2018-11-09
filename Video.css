@@ -2,12 +2,12 @@
   --lazyVideo: 0;
 }
 
-@supports (--VideoJS: 1) {
+@supports (--lazyVideo: 1) {
   @media screen and (min-width: 48em) {
     :root {
       --lazyVideo: 1;
-      --lazyVideo__margin: 150%; /* must be in % or px */
-      --lazyVideo__threshold: 1;
+      --lazyVideo__margin: 12.5%; /* must be in % or px */
+      --lazyVideo__threshold: 0.1;
     }
   }
 }

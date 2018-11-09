@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./Video.css">
     <style>
         video {
+            margin-top: 200vh;
             max-width: 100%;
         }
     </style>
@@ -14,16 +15,29 @@
 <body> 
 
     <video
-        class="js:lazyVideo"
-        data-src="./snow-globe.mp4"
         autoplay
+        class="js:lazyVideo"
+        data-poster="./snow-globe.png"
+        data-src="./snow-globe.mp4"
         loop
         muted
         playsinline
-        poster="./snow-globe.png"
+    >
+    </video>
+    <video
+        autoplay
+        class="js:lazyVideo"
+        data-poster="./snow-globe.png"
+        data-src="./snow-globe.mp4"
+        loop
+        muted
+        playsinline
     >
     </video>
 
     <script src="./index.js"></script>
+    <script>
+        const lazyVideo = new LazyVideo();
+    </script>
 </body>
 </html>
