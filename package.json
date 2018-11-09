@@ -1,6 +1,6 @@
 {
   "name": "lazyvideo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Lazy Loader for Videos that has css custom property checks",
   "main": "index.js",
   "dependencies": {},
